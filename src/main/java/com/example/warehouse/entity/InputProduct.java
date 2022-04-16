@@ -3,7 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Data
 @NoArgsConstructor
@@ -23,7 +23,7 @@ public class InputProduct {
 
     private double price;
 
-    private Date expireDate;
+    private Timestamp expireDate;
 
     @ManyToOne
     private Input input;

@@ -30,10 +30,10 @@ public class CategoryController {
 
     @GetMapping("/get")
     public List<Category> getCategories(){
-        List<Category> categoriesService = categoryService.getCategoriesService();
-       return categoriesService;
+       return categoryService.getCategoriesService();
     }
 
+    //categorylarni bolasini topish
     @PutMapping("/edit/{id}")
     public Result editCategory(@PathVariable Integer id,@RequestBody CategoryDto categoryDto){
         Result result = categoryService.editCategoryService(categoryDto, id);

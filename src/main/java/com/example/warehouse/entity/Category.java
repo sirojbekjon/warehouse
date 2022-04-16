@@ -33,4 +33,5 @@ public class Category extends AbsEntity {
     {
         return this.parrentCategory.getId();
     }
+
 }

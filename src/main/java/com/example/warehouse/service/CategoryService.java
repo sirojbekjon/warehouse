@@ -25,6 +25,8 @@ public class CategoryService {
             category.setParrentCategory(optionalParrent.get());
         }
         categoryRepository.save(category);
+        category.setParrentCategory(category);
+        categoryRepository.save(category);
         return new Result("Category saved successfully",true);
     }
 
@@ -34,8 +36,10 @@ public class CategoryService {
     }
 
     public List<Category> getCategoriesService() {
-        List<Category> categories = categoryRepository.findAll();
-      return categories;
+//        return categoryRepository.findAllByParrentCategoryId(category_id);
+//
+       return categoryRepository.findAll();
+
     }
 
     public Result editCategoryService(CategoryDto categoryDto,Integer id){

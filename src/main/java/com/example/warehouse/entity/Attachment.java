@@ -19,10 +19,12 @@ public class Attachment{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
+    private String fileOriginalName;
 
     private long size;
 
     private String contentType;
+
+    private String name;
 
 }

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import java.util.Collection;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
